@@ -9,3 +9,23 @@ func application(_ application: UIApplication, didRegisterForRemoteNotifications
     print("device_token = \(deviceTokenString)")
 }
 ```
+
+
+## gem 'houston'
+
+```
+$ bundler init  
+$ bundle install --path vendor/bundle  
+```
+
+## pem
+
+```
+$  openssl pkcs12 -in xxxx.p12 -out xxxx.pem -nodes -clcerts
+```
+
+## do
+
+```
+$ bundle exec ruby houston_push.rb
+```
