@@ -29,3 +29,16 @@ $  openssl pkcs12 -in xxxx.p12 -out xxxx.pem -nodes -clcerts
 ```
 $ bundle exec ruby houston_push.rb
 ```
+
+## Other confirmation methods
+
+- development 
+
+```
+curl -v -d '{"aps":{"alert":"hello"}}' -H "apns-topic: [Bundle ID]" --http2 --cert [pem file] https://api.sandbox.push.apple.com/3/device/[device token]
+```
+
+- production
+```
+curl -v -d '{"aps":{"alert":"hello"}}' -H "apns-topic: [Bundle ID]" --http2 --cert [pem file] https://api.push.apple.com/3/device/[device token]
+```
